@@ -14,12 +14,92 @@
     <link href="css/mdb.min.css" rel="stylesheet">
     <!-- Your custom styles (optional) -->
     <link href="css/style.css" rel="stylesheet">
+
+     <!-- Template styles -->
+    <style rel="stylesheet">
+        /* TEMPLATE STYLES */
+        /* Necessary for full page carousel*/
+        
+        html,
+        body,
+        .view {
+            height: 100%;
+        }
+        /* Navigation*/
+        
+        .navbar {
+            background-color: transparent;
+        }
+        
+        .scrolling-navbar {
+            -webkit-transition: background .5s ease-in-out, padding .5s ease-in-out;
+            -moz-transition: background .5s ease-in-out, padding .5s ease-in-out;
+            transition: background .5s ease-in-out, padding .5s ease-in-out;
+        }
+        
+        .top-nav-collapse {
+            background-color: #fff;
+        }
+        
+        footer.page-footer {
+            background-color: #1C2331;
+            margin-top: 0;
+        }
+        
+        @media only screen and (max-width: 768px) {
+            .navbar {
+                background-color: #fff;
+            }
+        }
+        /* Carousel*/
+        
+        .carousel,
+        .carousel-item,
+        .active {
+            height: 100%;
+        }
+        
+        .carousel-inner {
+            height: 100%;
+        }
+        
+        .carousel-item:nth-child(1) {
+            background-image: url("img/slide/slide1.jpg");
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        
+        .carousel-item:nth-child(2) {
+            background-image: url("img/slide/slide2.jpg");
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        
+        .carousel-item:nth-child(3) {
+            background-image: url("img/slide/slide3.jpg");
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        /*Caption*/
+        
+       
+        
+        @media (min-width: 776px) {
+            .carousel .view ul li {
+                display: inline;
+            }
+            .carousel .view .full-bg-img ul li .flex-item {
+                margin-bottom: 1.5rem;
+            }
+        }
+    </style>
 </head>
 
 <body>
 
-	<!--Navbar-->
-<nav class="navbar navbar-toggleable-md navbar-light">
+
+<!--Navbar-->
+<nav class="navbar navbar-toggleable-md navbar-light bg-faded scrolling-navbar fixed-top">
     <div class="container">
         <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarNav1" aria-controls="navbarNav1" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -29,10 +109,10 @@
         </a>
         <div class="collapse navbar-collapse" id="navbarNav1">
             <ul class="navbar-nav ml-auto">
-                <li class="nav-item active navbar-right">
+                <li class="nav-item">
                     <a class="nav-link">About Us</a>
                 </li>
-                <li class="nav-item dropdown btn-group navbar-right">
+                <li class="nav-item dropdown btn-group">
                     <a class="nav-link dropdown-toggle" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Projects</a>
                     <div class="dropdown-menu dropdown-success" aria-labelledby="dropdownMenu1">
                         <a class="dropdown-item">Ongoing</a>
@@ -40,43 +120,89 @@
                         <a class="dropdown-item">Completed</a>
                     </div>
                 </li>
-                <li class="nav-item navbar-right">
+                <li class="nav-item">
                     <a class="nav-link">Contact Us</a>
                 </li>
             </ul>
         </div>
     </div>
 </nav>
+<!--/Navbar-->
 
-    <!-- Start your project here-->
-    <div style="height: 100vh">
-        <div class="flex-center flex-column animated fadeIn">
-            <h1 class="mb-1">Shraddha Group</h1>
 
-            <a target="_blank" href="https://mdbootstrap.com/mdb-quick-start/" class="btn indigo darken-4 mb-2">5 min</a>
+<!--Carousel Wrapper-->
+<div id="carousel-home" class="carousel slide carousel-fade" data-ride="carousel">
+    <!--Indicators-->
+    <ol class="carousel-indicators">
+        <li data-target="#carousel-home" data-slide-to="0" class="active"></li>
+        <li data-target="#carousel-home" data-slide-to="1"></li>
+        <li data-target="#carousel-home" data-slide-to="2"></li>
+    </ol>
+    <!--/.Indicators-->
+    <!--Slides-->
+    <div class="carousel-inner" role="listbox">
+        <!--First slide-->
+        <div class="carousel-item active">
 
-            <h5 class="mb-1">Thank you for using our product. We're glad you're with us.</h5>
+        </div>
+        <!--/First slide-->
+        <!--Second slide-->
+        <div class="carousel-item">
 
-            <p class="text-muted">ADitya Samant</p>
+        </div>
+        <!--/Second slide-->
+        <!--Third slide-->
+        <div class="carousel-item">
 
-            
+        </div>
+        <!--/Third slide-->
+    </div>
+    <!--/.Slides-->
+    <!--Controls-->
+    <a class="carousel-control-prev" href="#carousel-home" role="button" data-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+    </a>
+    <a class="carousel-control-next" href="#carousel-home" role="button" data-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+    </a>
+    <!--/.Controls-->
+</div>
+<!--/.Carousel Wrapper-->
+
+
+<!--About-->
+    <div style="height: 80vh">
+    	<div class="container flex-center">
+
+        <div class="row flex-center flex-column animated fadeIn">
+            <h1>About Us</h1>
+
+            <a target="_blank" href="https://mdbootstrap.com/mdb-quick-start/" class="btn btn-primary mb-2">5 min quick start with MDB</a>
+
+            <h5 class="mb-1 test-gray">Thank you for using our product. We're glad you're with us.</h5>
+
+            <p class="text-muted">MDB Team</p>
+
+        </div>	
+ 
         </div>
     </div>
+<!--/About-->
 
-    <!--Footer-->
 
-    <!--Copyright-->
-    <footer class="page-footer">
+<!--Footer-->
+<!--Copyright-->
+<footer class="page-footer">
     <div class="footer-copyright">
         <div class="container-fluid">
-            © 2015 Copyright: <a href="https://www.MDBootstrap.com"> MDBootstrap.com </a>
+            © 2017 Copyright: <a href="https://theshraddhagroup.com"> theshraddhagroup.com </a>
             </div>
         </div>
     <!--/.Copyright-->
 </footer>
 <!--/.Footer-->
-
-    <!-- /Start your project here-->
 
     <!-- SCRIPTS -->
     <!-- JQuery -->
